@@ -956,8 +956,13 @@ section.stickyNotes {
 
 @media screen and (max-width: 480px) {
 
+    body {
+        background-color: #533951;
+    }
+
     h3 {
         font-size: 1.6rem;
+        font-family: "Quicksand", sans-serif;
     }
 
 
@@ -969,7 +974,7 @@ section.stickyNotes {
     .mediaHomePage {
         display: block;
         width: 100%;
-        height: 100vh;
+        height: 600px;
         background-color: #533951;
         background-image: url(../images/default.svg);
         background-repeat: no-repeat;
@@ -980,14 +985,13 @@ section.stickyNotes {
     }
 
     #mediaBegin {
-        margin-top: 500px;
+        margin-top: 400px;
         text-align: center;
     }
 
     #mediaBegin a {
         color: #d38f8e;
         font-size: 1.2rem;
-        font-family: "Playfair Display", sans-serif;
         text-decoration: none;
     }
 

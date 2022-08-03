@@ -131,7 +131,7 @@ function mediaLoad() {
     }
 }
 
-document.getElementById('beginBtn').addEventListener('click', scroll)
+// document.getElementById('beginBtn').addEventListener('click', scroll)
 
 function scroll() {
     document.querySelector('.landing').style.display = 'block';
