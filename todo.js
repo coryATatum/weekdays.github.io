@@ -1,13 +1,13 @@
 
 let todo_modal = document.querySelector('.modal')
-let form = document.getElementById("form");
-let addTask = document.getElementById("submit")
-let input = document.getElementById("content");
-let desc = document.getElementById("description")
-let due_date = document.getElementById("date");
+let form = document.querySelector(".form");
+let addTask = document.querySelector(".submitTask")
+let input = document.querySelector(".content");
+let desc = document.querySelector(".description")
+let due_date = document.querySelector(".date");
 let posts = document.querySelector(".toDoContainer");
 let remove = document.getElementById('discard');
-let toDoBg = document.querySelector('toDo');
+let toDoBg = document.querySelector('.toDo');
 let progressBar = document.getElementById('progressResult');
 let homePage = document.querySelector('.homePage')
 
@@ -15,7 +15,6 @@ let homePage = document.querySelector('.homePage')
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     formValidation();
-    todo_modal.style.display = 'none'
 });
 
 let formValidation = () => {
@@ -35,7 +34,7 @@ let acceptData = () => {
     data.push({
         title: input.value,
         desciption: desc.value,
-        dueDate: date.value,
+        dueDate: due_date.value,
     });
 
 
@@ -75,7 +74,7 @@ let createPost = () => {
 let formReset = () => {
     input.value = "";
     desc.value = "";
-    date.value = "";
+    due_date.value = "";
 };
 
 let editTask = (e) => {
@@ -104,7 +103,6 @@ let deleteTask = (e) => {
 
 (() => {
     data = JSON.parse(localStorage.getItem("data")) || [];
-    tallyData = (JSON.parse(window.localStorage.getItem('tally'))) || "0";
     createPost();
 })()
 //----------------Nav Bar------------------//
@@ -120,33 +118,19 @@ let stickyNoteBtn = document.getElementById('stickNotes');
 let logoutBtn = document.getElementById('logoutBtn');
 const mq = window.matchMedia("(max-width: 600px)");
 
-window.onload = mediaLoad();
-
-function mediaLoad() {
-    if (mq.matches) {
-        document.querySelector('.mediaHomePage').style.display = 'block';
-        document.querySelector('.landing').style.display = 'none';
-    } else {
-        document.querySelector('.mediaHomePage').style.display = 'none';
-    }
-}
-
-// document.getElementById('beginBtn').addEventListener('click', scroll)
-
-function scroll() {
-    document.querySelector('.landing').style.display = 'block';
-    document.querySelector('.mediaHomePage').style.display = 'none';
+if (mq.matches) {
+    document.querySelector('.mediaHomePage').style.display = 'block'
 }
 
 hpBtn.addEventListener('click', openHome)
 
 function openHome() {
+
     homepage.style.display = 'block'
     homePage.style.display = 'block'
     activity.style.display = 'none';
     calPage.style.display = 'none'
     stickNotesPage.style.display = 'none';
-
 }
 
 todoPage.addEventListener('click', openToDo)
@@ -156,7 +140,7 @@ function openToDo() {
     calPage.style.display = 'none'
     homepage.style.display = 'none';
     stickNotesPage.style.display = 'none';
-    homePage.style.display = 'none'
+    document.querySelector('.mediaHomePage').style.display = 'none'
 
 }
 
@@ -167,7 +151,7 @@ function openCal() {
     homepage.style.display = 'none'
     calPage.style.display = 'block'
     activity.style.display = 'none'
-    homePage.style.display = 'none'
+    document.querySelector('.mediaHomePage').style.display = 'none'
 }
 
 stickyNoteBtn.addEventListener('click', openStickyNote);
@@ -177,7 +161,7 @@ function openStickyNote() {
     homepage.style.display = 'none'
     calPage.style.display = 'none'
     activity.style.display = 'none'
-    homePage.style.display = 'none'
+    document.querySelector('.mediaHomePage').style.display = 'none'
 }
 
 
@@ -332,7 +316,7 @@ let stickyModal = document.getElementById('stickyModal');
 
 window.onload = document.querySelector("#user_input").select();
 
-document.querySelector("#add_note").addEventListener("click", () => {
+document.querySelector(".add_note").addEventListener("click", () => {
     document.querySelector("#stickyModal").style.display = "block";
     homePage.style.display = 'none'
 });
