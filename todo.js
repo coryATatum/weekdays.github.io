@@ -1,10 +1,10 @@
 
 let todo_modal = document.querySelector('.modal')
-let form = document.querySelector(".form");
-let addTask = document.querySelector(".submitTask")
-let input = document.querySelector(".content");
-let desc = document.querySelector(".description")
-let due_date = document.querySelector(".date");
+let form = document.getElementById("form");
+let addTask = document.getElementById("submit")
+let input = document.getElementById("content");
+let desc = document.getElementById("description")
+let due_date = document.getElementById("date");
 let posts = document.querySelector(".toDoContainer");
 let remove = document.getElementById('discard');
 let toDoBg = document.querySelector('.toDo');
@@ -14,8 +14,9 @@ let homePage = document.querySelector('.homePage')
 //-------------------To Do---------------------------------//
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    formValidation();
+    formValidation()
 });
+
 
 let formValidation = () => {
     if (input.value === "") {
@@ -124,6 +125,7 @@ if (mq.matches) {
 
 hpBtn.addEventListener('click', openHome)
 
+
 function openHome() {
 
     homepage.style.display = 'block'
@@ -152,6 +154,7 @@ function openCal() {
     calPage.style.display = 'block'
     activity.style.display = 'none'
     document.querySelector('.mediaHomePage').style.display = 'none'
+    document.querySelector('.homePage').style.display = 'none'
 }
 
 stickyNoteBtn.addEventListener('click', openStickyNote);

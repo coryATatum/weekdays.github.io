@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/dashboard.css">
 
-    <title>weekdays</title>
+    <title>weekdays.</title>
 </head>
 
 <body>
@@ -153,19 +153,19 @@
                     <div class="modalTitle">
                         <h2>New Task</h2>
                     </div>
-                    <form class="form">
+                    <form id="form">
                         <div class="taskTitle">
-                            <input type="text" placeholder="Enter Task" name="content" class="content">
+                            <input type="text" placeholder="Enter Task" name="content" id="content">
                         </div>
                         <div class="deadline">
-                            <input type="date" name="date" class="date" placeholder="Enter Deadline">
+                            <input type="date" name="date" id="date" placeholder="Enter Deadline">
                         </div>
                         <div class="taskDescription">
-                            <textarea name="description" class="description" cols="5" rows="5"
+                            <textarea name="description" id="description" cols="5" rows="5"
                                 placeholder="Description"></textarea>
                         </div>
                         <div class="submit">
-                            <button type="submit" class="btn" class="submitTask">Add +</button>
+                            <button type="submit" class="btn" id="submit">Add +</button>
                         </div>
                     </form>
                 </div>
@@ -212,6 +212,13 @@
         <section class="cal">
 
             <div id="container">
+                <svg class="backHome" onclick="history.back();" stroke="currentColor" fill="currentColor"
+                    stroke-width="0" viewBox="0 0 1024 1024" height="2em" width="2em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
+                    </path>
+                </svg>
                 <div id="calenderHeader">
                     <p id="backButton"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
                             viewBox="0 0 1024 1024" height="1.2em" width="1.2em" xmlns="http://www.w3.org/2000/svg">
@@ -281,8 +288,14 @@
 
         <section class="activity" id="todo">
             <header class="activityHeader">
+                <svg class="backHome" onclick="history.back();" stroke="currentColor" fill="currentColor"
+                    stroke-width="0" viewBox="0 0 1024 1024" height="2em" width="2em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
+                    </path>
+                </svg>
                 <h3>To-Do List</h3>
-
             </header>
             <div class="taskDashboard">
                 <header>
@@ -351,21 +364,23 @@
                 <header>
                     <div class="stickyContainer">
                         <div id="header">
-                            <h1 class="add_note"> Sticky Notes</h1>
-                            <div class="addStickyBtn">
-                                <svg class="add_note" stroke="currentColor" fill="currentColor" stroke-width="0"
-                                    viewBox="0 0 16 16" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z"
-                                        clip-rule="evenodd"></path>
-                                    <path fill-rule="evenodd"
-                                        d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z"
-                                        clip-rule="evenodd"></path>
-                                    <path fill-rule="evenodd"
-                                        d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z"
-                                        clip-rule="evenodd"></path>
+                            <div class="stickyTitle">
+                                <svg id="backHome" onclick="history.back();" stroke="currentColor" fill="currentColor"
+                                    stroke-width="0" viewBox="0 0 1024 1024" height="1.5em" width="1.5em"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
+                                    </path>
                                 </svg>
-
+                                <h1 class="add_note"> <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        t="1551322312294" viewBox="0 0 1024 1024" version="1.1" pId="10297"
+                                        height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                                        <defs></defs>
+                                        <path d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z"
+                                            pId="10298"></path>
+                                        <path d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z"
+                                            pId="10299"></path>
+                                    </svg>Sticky Notes</h1>
                             </div>
                         </div>
                     </div>

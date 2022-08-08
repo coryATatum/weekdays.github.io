@@ -14,6 +14,7 @@ function openModal() {
     } else {
         modal.style.display = 'grid'
         mediaModal.style.display = 'none'
+        document.querySelector('.homePage').style.display = 'none'
     }
 };
 
