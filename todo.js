@@ -125,6 +125,16 @@ if (mq.matches) {
 
 hpBtn.addEventListener('click', openHome)
 
+let returnHome = () => {
+    if (mq.matches) {
+        activity.style.display = 'none';
+        calPage.style.display = 'none'
+        homepage.style.display = 'block';
+        stickNotesPage.style.display = 'none';
+        document.querySelector('.mediaHomePage').style.display = 'none'
+    }
+}
+
 
 function openHome() {
 
