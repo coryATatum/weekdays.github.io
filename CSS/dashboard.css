@@ -1320,6 +1320,7 @@ section.stickyNotes {
     }
 
     #backHome {
+        display: block;
         color: #533951;
         font-size: 1.5rem;
         left: 8%;
@@ -1357,9 +1358,10 @@ section.stickyNotes {
         align-items: center;
     }
 
+
     #inner_modal {
         position: fixed;
-        left: 10%;
+        left: 11.5%;
     }
 
     .addStickyBtn {
