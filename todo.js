@@ -258,14 +258,14 @@ let deleteMediaTask = (e) => {
         mediaData.splice(e.parentElement.parentElement.id, 1);
 
         localStorage.setItem("mediaData", JSON.stringify(mediaData));
-    } else {
-        deleteTask();
     }
 };
 
 (() => {
-    mediaData = JSON.parse(localStorage.getItem("mediaData")) || [];
-    createMediaPost();
+    if (mquery.matches) {
+        mediaData = JSON.parse(localStorage.getItem("mediaData")) || [];
+        createMediaPost();
+    }
 })()
 
 
