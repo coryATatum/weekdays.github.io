@@ -254,7 +254,7 @@ let editMediaTask = (e) => {
 let deleteMediaTask = (e) => {
     e.parentElement.parentElement.parentElement.remove();
 
-    data.splice(e.parentElement.parentElement.id, 1);
+    medieData.splice(e.parentElement.parentElement.id, 1);
 
     localStorage.setItem("mediaData", JSON.stringify(mediaData));
 };
