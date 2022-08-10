@@ -110,7 +110,7 @@ let createPost = () => {
         <div class="task-desc"><span>${x.desciption}</span></div>
         <div class="due-date"><strong>Due Date:</strong>${x.dueDate}
             <div class="delete_editIcons">
-                <i onClick="deleteTask(this); createTasks();" id="discard"
+                <i onClick="deleteTask(this);" id="discard"
                     class="fas fa-trash-alt"></i>
             </div>
         </div>
@@ -180,7 +180,7 @@ let mediaFormValidation = () => {
         mediaPosts.innerHTML = "Post cannot be blank";
         alert("Please enter task title.");
     } else {
-        posts.innerHTML = "";
+        mediaPosts.innerHTML = "";
         acceptMediaData();
     }
 };
@@ -216,7 +216,7 @@ let createMediaPost = () => {
         <div class="task-desc"><span>${x.desciption}</span></div>
         <div class="due-date"><strong>Due Date:</strong>${x.dueDate}
             <div class="delete_editIcons">
-                <i onClick="deleteTask(this); createTasks();" id="discard"
+                <i onClick="deleteMediaTask(this);" id="discard"
                     class="fas fa-trash-alt"></i>
             </div>
         </div>
@@ -252,11 +252,15 @@ let editMediaTask = (e) => {
 };
 
 let deleteMediaTask = (e) => {
-    e.parentElement.parentElement.parentElement.remove();
+    if (mquery.matches) {
+        e.parentElement.parentElement.parentElement.remove();
 
-    medieData.splice(e.parentElement.parentElement.id, 1);
+        mediaData.splice(e.parentElement.parentElement.id, 1);
 
-    localStorage.setItem("mediaData", JSON.stringify(mediaData));
+        localStorage.setItem("mediaData", JSON.stringify(mediaData));
+    } else {
+        deleteTask();
+    }
 };
 
 (() => {
