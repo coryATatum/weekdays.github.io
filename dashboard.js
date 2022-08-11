@@ -11,11 +11,8 @@ let calOpenBtn = document.getElementById('calBtn');
 let stickNotesPage = document.querySelector('.stickyNotes');
 let stickyNoteBtn = document.getElementById('stickNotes');
 let logoutBtn = document.getElementById('logoutBtn');
+let mediaHome = document.querySelector('.mediaHomePage')
 const mq = window.matchMedia("(max-width: 600px)");
-
-if (mq.matches) {
-    document.querySelector('.mediaHomePage').style.display = 'block'
-}
 
 hpBtn.addEventListener('click', openHome)
 
