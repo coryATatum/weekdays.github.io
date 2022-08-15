@@ -87,17 +87,21 @@ section.homePage {
 
 section.homePage #empty {
     width: 100%;
-    height: 600px;
+    height: 70%;
+}
+
+#clickHere {
+    height: 10%;
 }
 
 #clickHere a {
+    font-family: 'Raleway', sans-serif;
     font-size: 25px;
     color: #d38f8e;
     float: right;
-    margin-right: 400px;
     text-decoration: none;
     position: fixed;
-    left: 940px;
+    left: 60%;
 }
 
 #clickHere a:hover {
