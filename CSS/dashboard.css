@@ -239,7 +239,7 @@ section.home header svg {
 
 #todoList {
     width: 100%;
-    height: 200px;
+    height: 80%;
     border-radius: 12px 12px 0 0;
     background-color: white;
     background-image: url(../img/undraw_To_do_re_jaef\ .png);
@@ -250,7 +250,7 @@ section.home header svg {
 
 #calender {
     width: 100%;
-    height: 200px;
+    height: 80%;
     border-radius: 12px 12px 0 0;
     background-image: url(../img/undraw_Online_calendar_re_wk3t.png);
     background-position: center;
@@ -260,7 +260,7 @@ section.home header svg {
 
 #stickyNotes {
     width: 100%;
-    height: 200px;
+    height: 80%;
     border-radius: 12px 12px 0 0;
     background-image: url(../img/undraw_Taking_notes_re_bnaf.png);
     background-position: center;
@@ -270,8 +270,9 @@ section.home header svg {
 
 .activity {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
+    justify-content: center;
     display: none;
     overflow: hidden;
 }
@@ -283,9 +284,9 @@ section.home header svg {
 
 .taskDashboard {
     width: 90%;
-    height: 600px;
-    margin-top: 80px;
-    margin-left: 35px;
+    height: 85%;
+    margin-top: 5%;
+    margin-left: 2%;
     background-color: #d38f8e;
     border-radius: 12px;
 }
@@ -638,13 +639,13 @@ button {
 #calenderHeader {
     width: 95%;
     height: 40px;
-    padding: 10px;
+    padding: 2%;
     color: #d36c6c;
     font-size: 26px;
     font-family: sans-serif;
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 25px;
+    margin-bottom: 2%;
 }
 
 .toggleBtn {
@@ -681,7 +682,7 @@ button {
 
 #container {
     width: 100%;
-    height: 660px;
+    max-height: 100%;
     overflow: hidden;
 }
 
@@ -690,20 +691,24 @@ button {
 }
 
 #weekdays {
-    width: 98%;
+    width: 95%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     color: #d38f8e;
     font-weight: 700;
+    margin-left: 2%;
 }
 
 
 
 #weekdays div {
-    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
     padding: 8px;
-    margin-right: 18px;
+    margin-right: 2%;
 }
 
 #calendar {
@@ -713,7 +718,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     overflow: scroll;
-    margin-left: 12px;
+    margin-left: 1%;
 }
 
 #calendar::-webkit-scrollbar {
